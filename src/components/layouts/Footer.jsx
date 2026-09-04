@@ -101,7 +101,7 @@ return (
             </div>
             {/* bottom footer */}
             <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-                {/* Social Icons */}
+                {/* social icons */}
                 <div className="flex gap-5">
                     <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noreferrer" className="text-[#555555] hover:text-[#262626] hover:-translate-y-1 transition-all duration-300">
                         <FaFacebookF className="text-lg" />
