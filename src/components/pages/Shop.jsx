@@ -85,7 +85,7 @@ const Shop = () => {
 
     return (
         <>
-        {/* Breadcrumb Part */}
+        {/* breadcrumb part */}
         <Container className={'py-10 md:py-16 lg:py-[125px] px-4 lg:px-0'}>
             <h3 className="text-[28px] md:text-[34px] lg:text-[39px] text-[#262626] font-bold block pb-3 md:pb-5">Shop</h3>
             <Flex className={'text-[12px] text-[#767676] gap-x-2 items-center'}>
@@ -96,7 +96,7 @@ const Shop = () => {
         </Container>
         <Container className={'px-4 lg:px-0 pb-16 md:pb-20 lg:pb-[100px]'}>
             <Flex className={'flex-col lg:flex-row justify-between items-start gap-x-8 gap-y-10 lg:gap-y-0'}>
-                {/* Sidebar */}
+                {/* sidebar */}
                 <div className="sideBar w-full lg:w-[25%] pb-5 lg:pb-[30px]">
                     <div className="category">
                         <h4 className='text-[#262626] font-bold text-[18px] md:text-[20px] pb-4 md:pb-[30px]'>Shop By Category</h4>
@@ -126,9 +126,9 @@ const Shop = () => {
                         </div>
                     </div>
                 </div>
-                {/* Main Content */}
+                {/* main content */}
                 <div className="w-full lg:w-[75%]">
-                    {/* Top Filtering Bar */}
+                    {/* top filtering bar */}
                     <div className="firstLine flex flex-col md:flex-row justify-between items-start md:items-center pb-6 md:pb-10 lg:pb-[50px] gap-y-4 md:gap-y-0">
                         <div className='flex gap-x-3'>
                             <div className="p-2 border border-[#F0F0F0] bg-black text-white cursor-pointer hover:bg-black hover:text-white transition-all">
@@ -138,7 +138,7 @@ const Shop = () => {
                                 <CiGrid2H className='text-[18px] md:text-[20px]'/>
                             </div>
                         </div>
-                        {/* Dropdowns */}
+                        {/* dropdowns */}
                         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-y-3 sm:gap-x-5 w-full md:w-auto">
                             <div className="flex justify-between sm:justify-start gap-x-2 items-center w-full sm:w-auto">
                                 <p className='text-[#767676] text-sm md:text-base whitespace-nowrap'>Sort by:</p>
@@ -166,7 +166,7 @@ const Shop = () => {
                             </div>
                         </div>
                     </div>
-                    {/* Product Grid */}
+                    {/* product grid */}
                     <div className="pt-2 w-full" ref={containerRef}>
                         {isLoading ? (
                             <div className="flex justify-center items-center py-20 w-full">
@@ -179,7 +179,6 @@ const Shop = () => {
                             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-8'>
                                 {currentItems.map((item, index) => {
                                     const filterClass = dummyCategories[index % dummyCategories.length];
-                                    // SEO friendly dynamic URL slug
                                     const itemSlug = item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
                                     return (
                                         <div key={item.id} className={`mix ${filterClass} w-full`}>
@@ -196,7 +195,7 @@ const Shop = () => {
                                 })}
                             </div>
                         )}
-                        {/* Pagination */}
+                        {/* pagination */}
                         {!isLoading && totalPages > 1 && (
                             <div className="flex justify-center md:justify-end mt-12 md:mt-20 w-full overflow-hidden">
                                 <div className="flex items-center gap-x-1">
