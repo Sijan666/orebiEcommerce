@@ -8,7 +8,7 @@ const Login = () => {
     return (
         <>
         <section id="login">
-            {/* Breadcrumb Part */}
+            {/* breadcrumb part */}
             <Container className={'py-10 md:py-16 lg:py-[100px] px-4 lg:px-0'}>
                 <h3 className="text-[28px] md:text-[34px] lg:text-[39px] text-[#262626] font-bold block pb-3 md:pb-5">Login</h3>
                 <Flex className={'text-[12px] text-[#767676] gap-x-2 items-center'}>
@@ -17,13 +17,13 @@ const Login = () => {
                     <p>Login</p>
                 </Flex>
             </Container>
-            {/* Intro */}
+            {/* intro */}
             <Container className={'pb-4 md:pb-[11px] px-4 lg:px-0'}>
                 <p className="text-sm md:text-base text-[#767676] border-b border-[#F0F0F0] pb-8 md:pb-[60px] w-full lg:w-[620px]">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.
                 </p>
             </Container>
-            {/* Returning Customer Part */}
+            {/* returning customer part */}
             <Container className={'py-10 md:py-[60px] px-4 lg:px-0'}>
                 <h4 className="text-[28px] md:text-[34px] lg:text-[39px] text-[#262626] font-bold block pb-3 md:pb-5">Returning Customer</h4>
                 <div className="pt-4 md:pt-[50px]">
@@ -42,7 +42,7 @@ const Login = () => {
                     </div>
                 </div>
             </Container>
-            {/* New Customer Part */}
+            {/* new customer part */}
             <Container className={'px-4 lg:px-0'}>
                 <h4 className="text-[28px] md:text-[34px] lg:text-[39px] text-[#262626] font-bold block pb-3 md:pb-5">New Customer</h4>
                 <div className="py-2 md:py-5">
@@ -56,7 +56,6 @@ const Login = () => {
                     </div>
                 </div>
             </Container>
-            
         </section>
         </>
     )
