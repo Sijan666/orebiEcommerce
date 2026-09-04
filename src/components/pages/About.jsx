@@ -10,7 +10,7 @@ const About = () => {
   return (
     <>
     <section className="py-2" id="about">
-      {/* Breadcrumb Part */}
+      {/* breadcrumb Part */}
       <Container className={'py-10 md:py-20 lg:py-[125px] px-4 lg:px-0'}>
           <h3 className="text-[28px] md:text-[34px] lg:text-[39px] text-[#262626] font-bold block pb-3 md:pb-5">About</h3>
           <Flex className={'text-[12px] text-[#767676] gap-x-2 items-center'}>
