@@ -97,14 +97,12 @@ const TrackOrder = () => {
                         </button>
                     </form>
                 </div>
-                
                 {error && (
                     <div className="max-w-2xl mx-auto flex items-center justify-center gap-2 text-red-500 bg-red-50 py-3 px-4 rounded-xl border border-red-100 text-sm font-medium animate-[fade-in_0.3s_ease-out]">
                         <FiAlertCircle className="text-lg shrink-0" />
                         <span>{error}</span>
                     </div>
                 )}
-
                 {trackingResult && !isSearching && (
                     <div className="bg-white rounded-3xl shadow-[0_8px_40px_rgb(0,0,0,0.04)] border border-gray-100 overflow-hidden animate-[fade-in_0.5s_ease-out]">
                         <div className="bg-[#fafafa] p-8 sm:p-10 border-b border-gray-100">
