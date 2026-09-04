@@ -19,7 +19,7 @@ const About = () => {
               <p>About</p>
           </Flex>
       </Container>
-      {/* Images */}
+      {/* images */}
       <Container className={'pb-[50px] md:pb-20 lg:pb-[100px] px-4 lg:px-0'}>
         <Flex className={'flex-col md:flex-row justify-between gap-y-8 md:gap-y-0 md:gap-x-6 lg:gap-x-10'}>
           <div className="leftSide relative w-full md:w-1/2">
