@@ -85,13 +85,13 @@ const Specialoffer = () => {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                        {/* --- Previous Arrow --- */}
+                        {/* previous arrow */}
                         <button aria-label="Previous slide" className="special-prev absolute top-[40%] left-0 lg:-left-5 z-10 w-8 h-8 bg-gray-100 hover:bg-black text-black hover:text-white flex items-center justify-center rounded-full -translate-y-1/2 transition-all duration-300 shadow-md">
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7"></path>
                             </svg>
                         </button>
-                        {/* --- Next Arrow --- */}
+                        {/* next arrow */}
                         <button aria-label="Next slide" className="special-next absolute top-[40%] right-0 lg:-right-5 z-10 w-8 h-8 bg-gray-100 hover:bg-black text-black hover:text-white flex items-center justify-center rounded-full -translate-y-1/2 transition-all duration-300 shadow-md">
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7"></path>
