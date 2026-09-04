@@ -80,7 +80,7 @@ const IndividualProduct = () => {
                     {JSON.stringify(jsonLdSchema)}
                 </script>
             </Helmet>
-            {/* Breadcrumb & Back Nav */}
+            {/* breadcrumb & back nav */}
             <div className="border-b border-gray-100 bg-white mb-8 lg:mb-12">
                 <Container className="px-4 lg:px-0 py-6 flex items-center justify-between">
                     <button
@@ -99,9 +99,9 @@ const IndividualProduct = () => {
             </div>
             <Container className="px-4 lg:px-0">
                 <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
-                    {/* LEFT SIDE */}
+                    {/* left side */}
                     <div className="w-full lg:w-1/2 flex flex-col-reverse md:flex-row gap-4 lg:gap-5">
-                        {/* Thumbnails */}
+                        {/* thumbnails */}
                         <div className="flex md:flex-col gap-4 overflow-x-auto md:overflow-visible shrink-0 md:w-[90px] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                             {product.images?.slice(0, 4).map((img, index) => (
                                 <div
@@ -117,7 +117,7 @@ const IndividualProduct = () => {
                                 </div>
                             ))}
                         </div>
-                        {/* Image */}
+                        {/* image */}
                         <div className="flex-1 bg-[#F5F5F3] rounded-[24px] relative flex items-center justify-center p-8 min-h-[350px] md:min-h-[500px]">
                             {product.discountPercentage > 0 && (
                                 <div className="absolute top-6 left-6 bg-[#FF4545] text-white text-[12px] font-bold px-4 py-1.5 rounded-full z-10 shadow-sm tracking-wide">
@@ -131,7 +131,7 @@ const IndividualProduct = () => {
                             />
                         </div>
                     </div>
-                    {/* RIGHT SIDE */}
+                    {/* right side */}
                     <div className="w-full lg:w-1/2 flex flex-col justify-center">
                         <div className="mb-4">
                             <h3 className="text-[12px] font-bold text-[#767676] uppercase tracking-[0.2em] mb-3">
@@ -167,7 +167,7 @@ const IndividualProduct = () => {
                         <p className="text-[#767676] text-[15px] md:text-[16px] leading-[1.8] mb-10 md:pr-10">
                             {product.description}
                         </p>
-                        {/* Actions */}
+                        {/* actions */}
                         <div className="flex flex-col sm:flex-row gap-4 mb-12">
                             <div className="flex items-center justify-between border border-gray-200 rounded-full h-[54px] w-full sm:w-[150px] px-2 bg-white">
                                 <button
@@ -206,7 +206,7 @@ const IndividualProduct = () => {
                                 )}
                             </button>
                         </div>
-                        {/* Features */}
+                        {/* features */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div className="flex items-center gap-4 border border-gray-100 rounded-2xl p-5">
                                 <div className="text-xl text-gray-800 shrink-0">
@@ -239,7 +239,7 @@ const IndividualProduct = () => {
                     </div>
                 </div>
             </Container>
-            {/* Toast */}
+            {/* toast */}
             <div 
                 className={`fixed bottom-6 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-8 z-100 transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] ${
                     isAdded ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95 pointer-events-none'
