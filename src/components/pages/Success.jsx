@@ -66,18 +66,18 @@ const Success = () => {
         <div className="bg-[#fafafa] min-h-[80vh] flex items-center justify-center px-4 font-sans py-12">
             <div className="bg-white p-8 sm:p-12 rounded-2xl shadow-2xl border border-gray-100 max-w-xl w-full text-center relative overflow-hidden animate-[fade-in_0.5s_ease-out]">
                 <div className="absolute top-0 left-0 w-full h-1.5 bg-black"></div>
-                {/* Success Icon */}
+                {/* success icon */}
                 <div className="mx-auto w-20 h-20 bg-black rounded-full flex items-center justify-center mb-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
                     <FiCheck className="text-white text-4xl font-bold" />
                 </div>
-                {/* Heading & Text */}
+                {/* heading & text */}
                 <h1 className="text-3xl sm:text-4xl font-black text-gray-900 mb-3 tracking-tight">Order Confirmed!</h1>
                 <p className="text-gray-500 text-sm sm:text-base mb-10 leading-relaxed px-4 max-w-md mx-auto">
                     {paymentMethod === 'cod' 
                         ? "Thank you for your purchase. We've received your order. Please keep the cash ready upon delivery." 
                         : "Thank you for your purchase. We've received your order and will send a shipping update shortly."}
                 </p>
-                {/* Order Info */}
+                {/* order info */}
                 <div className="bg-[#f8f9fa] rounded-2xl border border-gray-100 p-6 mb-8 flex flex-col items-center justify-center gap-2">
                     <p className="text-[11px] text-gray-400 font-bold uppercase tracking-widest">Your Order Number</p>
                     <div 
@@ -94,7 +94,7 @@ const Success = () => {
                     </div>
                     <p className="text-xs text-gray-400 mt-2">* Save this token to track your delivery status later.</p>
                 </div>
-                {/* View Receipt Button */}
+                {/* view receipt button */}
                 <div className="mb-10">
                     <button 
                         onClick={handleViewReceipt} 
@@ -104,7 +104,7 @@ const Success = () => {
                         View Full Receipt & Details
                     </button>
                 </div>
-                {/* Action Buttons */}
+                {/* action buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 mt-6 pt-8 border-t border-gray-100">
                     <Link to="/shop" className="cursor-pointer flex-1 flex items-center justify-center gap-2 bg-white text-gray-900 border border-gray-200 px-6 py-4 rounded-xl text-sm font-bold tracking-wide hover:bg-gray-50 hover:border-black transition-all active:scale-[0.98]">
                         <FiShoppingBag className="text-lg" /> Continue Shopping
