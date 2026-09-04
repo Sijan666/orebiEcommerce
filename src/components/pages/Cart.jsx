@@ -82,7 +82,7 @@ const CartPage = () => {
                             ))}
                         </ul>
                     </section>
-                    {/* Right Column: Order Summary */}
+                    {/* right column: order summary */}
                     <section aria-labelledby="summary-heading" className="mt-16 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 xl:col-span-4 lg:mt-0 lg:p-8 lg:sticky lg:top-8 border border-gray-100">
                         <h2 id="summary-heading" className="text-lg font-medium text-gray-900 mb-6">
                             Order Summary
