@@ -26,7 +26,7 @@ const ContactUs = () => {
 
   return (
     <>
-      {/* Breadcrumb Section */}
+      {/* breadcrumb section */}
       <Container className={'py-10 md:py-16 lg:py-[125px] px-4 lg:px-0'}>
         <h3 className="text-[28px] md:text-[34px] lg:text-[39px] text-[#262626] font-bold block pb-3 md:pb-5">
           Contacts
@@ -37,13 +37,13 @@ const ContactUs = () => {
           <p>Contacts</p>
         </Flex>
       </Container>
-      {/* Contact Form Section */}
+      {/* contact form section */}
       <Container className={'pb-16 md:pb-[100px] lg:pb-[140px] px-4 lg:px-0'}>
         <h4 className="text-[28px] md:text-[34px] lg:text-[39px] text-[#262626] font-bold block pb-6 md:pb-10">
           Fill up a Form
         </h4>
         <form onSubmit={handleSubmit} className="w-full lg:w-[750px]">
-          {/* Name Field */}
+          {/* name field */}
           <div className="mb-4 md:mb-6">
             <label htmlFor="name" className="block text-sm md:text-base font-bold text-[#262626] pb-2 md:pb-4">
               Name
@@ -59,7 +59,7 @@ const ContactUs = () => {
               className="pb-3 md:pb-4 outline-none w-full border-b border-[#F0F0F0] text-sm md:text-base focus:border-black transition-colors duration-300"
             />
           </div>
-          {/* Email Field */}
+          {/* email field */}
           <div className="mb-4 md:mb-6">
             <label htmlFor="email" className="block text-sm md:text-base font-bold text-[#262626] pb-2 md:pb-4">
               Email
@@ -75,7 +75,7 @@ const ContactUs = () => {
               className="pb-3 md:pb-4 outline-none w-full border-b border-[#F0F0F0] text-sm md:text-base focus:border-black transition-colors duration-300"
             />
           </div>
-          {/* Message Field */}
+          {/* message field */}
           <div className="mb-8 md:mb-10">
             <label htmlFor="message" className="block text-sm md:text-base font-bold text-[#262626] pb-2 md:pb-4">
               Message
@@ -91,7 +91,7 @@ const ContactUs = () => {
               className="pb-3 md:pb-4 outline-none w-full border-b border-[#F0F0F0] text-sm md:text-base resize-none focus:border-black transition-colors duration-300"
             ></textarea>
           </div>
-          {/* Submit Button */}
+          {/* submit button */}
           <button 
             type="submit" 
             className="cursor-pointer w-full md:w-auto bg-black text-white font-bold py-4 px-12 text-sm md:text-base hover:bg-[#262626] transition-colors duration-300"
@@ -99,7 +99,7 @@ const ContactUs = () => {
             Post
           </button>
         </form>
-        {/* Map Section */}
+        {/* map section */}
         <div className="mt-16 md:mt-24">
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116833.9730352447!2d90.33728817435122!3d23.78084055948969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sus!4v1714413123456!5m2!1sen!2sus" 
