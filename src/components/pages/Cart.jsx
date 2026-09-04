@@ -37,7 +37,7 @@ const CartPage = () => {
                     Shopping Cart
                 </h1>
                 <div className="lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16">
-                    {/* Left Column: Cart Items List */}
+                    {/* left column: cart items list */}
                     <section aria-labelledby="cart-heading" className="lg:col-span-7 xl:col-span-8">
                         <h2 id="cart-heading" className="sr-only">Items in your shopping cart</h2>
                         <ul role="list" className="divide-y divide-gray-200 border-t border-b border-gray-200">
