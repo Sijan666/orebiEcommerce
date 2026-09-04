@@ -107,7 +107,7 @@ const Checkout = () => {
                         city: formData.city,
                         purchasedItems: purchasedItems, 
                         amountPaid: amountPaid,
-                        buyerDetails: formData // ADDED: Buyer er full details pass kora hocche
+                        buyerDetails: formData
                     } 
                 });
             }, 1800);
