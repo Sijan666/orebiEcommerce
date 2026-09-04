@@ -4,19 +4,19 @@ import Container from "../Container";
 import { FaArrowRight } from "react-icons/fa";
 
 const ContactUs = () => {
-  // State to manage form data
+  // state to manage form data
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: ""
   });
 
-  // Handle Input Changes
+  // handle input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle Form Submission
+  // handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Submitted Successfully:", formData);
