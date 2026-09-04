@@ -32,7 +32,7 @@ const About = () => {
           </div>
         </Flex>
       </Container>
-      {/* Text */}
+      {/* text */}
       <Container className={'px-4 lg:px-0'}>
         <h4 className="text-[20px] md:text-[28px] lg:text-[39px] leading-[30px] md:leading-[42px] lg:leading-[52px]">
           Orebi is one of the world’s leading ecommerce brands and is internationally recognized for celebrating the essence of classic Worldwide cool looking style.
