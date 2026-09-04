@@ -43,19 +43,19 @@ const ShopBanner = () => {
         <div className="pt-8 pb-10 md:pb-16 lg:pb-20">
             <Container className={'bg-[#F3F3F3]'}>
                 <Flex className="flex-col lg:flex-row items-center py-8 px-4 lg:py-0 lg:px-0 h-auto lg:h-[400px]">
-                    {/* Image */}
+                    {/* image */}
                     <div className="watch w-full lg:w-[40%] flex justify-center mb-6 lg:mb-0">
                         <Images 
                             imgSrc={phoneData.thumbnail} 
                             className="max-h-[250px] md:max-h-[300px] object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
                         />
                     </div>
-                    {/* Text */}
+                    {/* text */}
                     <div className="textPart w-full lg:w-[60%] flex flex-col items-center lg:items-start text-center lg:text-left lg:pl-10">
                         <h3 className="font-bold text-[28px] md:text-[34px] lg:text-[39px] text-[#262626] capitalize">
                             {phoneData.title}
                         </h3>
-                        {/* Description */}
+                        {/* description */}
                         <p className="py-5 lg:py-8 text-[14px] md:text-base text-[#262626] w-full lg:w-[511px] leading-relaxed">
                             {phoneData.description}
                         </p>
