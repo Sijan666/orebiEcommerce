@@ -6,7 +6,7 @@ const Receipt = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    // 1. DYNAMIC DATA CAPTURE
+    // dynamic data capture
     const orderNumber = location.state?.orderNumber || "N/A"; 
     const orderDate = location.state?.orderDate || new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
     const paymentMethod = location.state?.paymentMethod || "card";
@@ -71,7 +71,7 @@ const Receipt = () => {
 
             <div className="bg-[#f0f2f5] min-h-screen py-10 px-4 font-sans flex justify-center print:bg-white print:py-0 print:px-0">
                 <div className="w-full max-w-[850px]">
-                    {/* TOP ACTION BAR */}
+                    {/* top action bar */}
                     <div className="flex justify-between items-center mb-6 no-print">
                         <button 
                             onClick={() => navigate(-1)} 
@@ -86,10 +86,9 @@ const Receipt = () => {
                             <FiDownload className="text-base" /> Download PDF
                         </button>
                     </div>
-                    {/* RECEIPT PAPER */}
+                    {/* receipt paper */}
                     <div id="premium-receipt" className="bg-white p-10 md:p-16 shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-gray-100">
-                        
-                        {/* 1. Header (Brand & Title) */}
+                        {/* header */}
                         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end pb-8 border-b-2 border-black mb-10">
                             <div>
                                 <h1 className="text-4xl font-black tracking-[0.2em] text-black uppercase mb-1">
@@ -108,9 +107,9 @@ const Receipt = () => {
                                 </p>
                             </div>
                         </div>
-                        {/* 2. Customer & Order Meta Information */}
+                        {/* customer & order meta information */}
                         <div className="flex flex-col md:flex-row justify-between gap-10 mb-12 border-b border-gray-100 pb-10">
-                            {/* Billed To */}
+                            {/* billed to */}
                             <div className="flex-1">
                                 <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-3 border-l-2 border-black pl-3">
                                     Billed To
@@ -123,7 +122,7 @@ const Receipt = () => {
                                     <p className="text-xs text-gray-600">{buyerDetails.phone}</p>
                                 </div>
                             </div>
-                            {/* Order Details */}
+                            {/* order details */}
                             <div className="flex-1 grid grid-cols-2 gap-y-6 gap-x-4">
                                 <div>
                                     <p className="text-[9px] text-gray-400 font-bold uppercase tracking-widest mb-1">Date Issued</p>
@@ -143,15 +142,15 @@ const Receipt = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* 3. Items Table */}
+                        {/* items table */}
                         <div className="mb-12">
-                            {/* Table Head */}
+                            {/* table head */}
                             <div className="flex justify-between items-end border-b border-gray-200 pb-3 mb-4">
                                 <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest w-[60%]">Description</p>
                                 <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest w-[20%] text-center">Qty</p>
                                 <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest w-[20%] text-right">Amount</p>
                             </div>
-                            {/* Table Body */}
+                            {/* table body */}
                             <div className="space-y-4">
                                 {purchasedItems.length > 0 ? (
                                     purchasedItems.map((item, index) => (
@@ -173,7 +172,7 @@ const Receipt = () => {
                                 )}
                             </div>
                         </div>
-                        {/* 4. Calculation Summary */}
+                        {/* calculation summary */}
                         <div className="flex justify-end">
                             <div className="w-full sm:w-1/2">
                                 <div className="flex justify-between items-center mb-3">
@@ -190,7 +189,7 @@ const Receipt = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* 5. Footer Note */}
+                        {/* footer note */}
                         <div className="mt-20 border-t border-gray-200 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
                             <div>
                                 <p className="text-[11px] font-bold text-black uppercase tracking-widest mb-1">Thank You For Shopping</p>
