@@ -38,7 +38,7 @@ const About = () => {
           Orebi is one of the world’s leading ecommerce brands and is internationally recognized for celebrating the essence of classic Worldwide cool looking style.
         </h4>
       </Container>
-      {/* Three Columns */}
+      {/* three columns */}
       <Container className={'py-[50px] md:py-20 lg:py-[120px] px-4 lg:px-0'}>
         <Flex className={'flex-col md:flex-row md:flex-wrap lg:flex-nowrap justify-between gap-y-10 md:gap-y-12 lg:gap-y-0 lg:gap-x-5'}>
           <div className="w-full md:w-[48%] lg:w-1/3">
