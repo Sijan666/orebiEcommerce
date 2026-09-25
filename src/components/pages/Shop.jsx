@@ -125,7 +125,6 @@ const Shop = () => {
                             </div>
                         </div>
                     </div>
-
                     {/* Main Content */}
                     <div className="w-full lg:w-[75%]">
                         <div className="firstLine flex flex-col md:flex-row justify-between items-start md:items-center pb-6 md:pb-10 lg:pb-[50px] gap-y-4 md:gap-y-0">
@@ -144,7 +143,6 @@ const Shop = () => {
                                     <CiGrid2H className='text-[18px] md:text-[20px]'/>
                                 </div>
                             </div>
-
                             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-y-3 sm:gap-x-5 w-full md:w-auto">
                                 <div className="flex justify-between sm:justify-start gap-x-2 items-center w-full sm:w-auto">
                                     <p className='text-[#767676] text-sm md:text-base whitespace-nowrap'>Sort by:</p>
@@ -177,7 +175,6 @@ const Shop = () => {
                                 </div>
                             </div>
                         </div>
-
                         <div className="pt-2 w-full">
                             {isLoading ? (
                                 <div className="flex justify-center items-center py-20 w-full">
@@ -187,7 +184,6 @@ const Shop = () => {
                                     </div>
                                 </div>
                             ) : currentItems.length > 0 ? (
-                                {/* Grid container updated here: grid-cols-2 for mobile/small screens by default */}
                                 <div className={`grid gap-5 lg:gap-8 ${viewMode === 'grid' ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-3' : 'grid-cols-1'}`}>
                                     {currentItems.map((item) => {
                                         const itemSlug = item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
@@ -213,7 +209,6 @@ const Shop = () => {
                                 </div>
                             )}
                         </div>
-
                         {/* Pagination */}
                         {!isLoading && totalPages > 1 && (
                             <div className="flex justify-center md:justify-end mt-12 md:mt-20 w-full overflow-hidden">
@@ -230,7 +225,6 @@ const Shop = () => {
                                         <FaArrowLeft className={`text-[9px] sm:text-[10px] md:text-xs transition-transform duration-300 ${currentPage !== 1 && 'group-hover:-translate-x-1'}`} /> 
                                         <span className="hidden sm:block">Prev</span>
                                     </button>
-                                    
                                     <div className="flex items-center gap-x-0.5 sm:gap-x-1 px-0.5 sm:px-1">
                                         {getPaginationNumbers().map((page, index) => (
                                             page === '...' ? (
@@ -252,7 +246,6 @@ const Shop = () => {
                                             )
                                         ))}
                                     </div>
-
                                     <button
                                         onClick={() => currentPage < totalPages && handlePageChange(currentPage + 1)}
                                         disabled={currentPage === totalPages}
