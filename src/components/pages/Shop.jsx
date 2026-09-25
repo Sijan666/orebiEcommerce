@@ -187,7 +187,8 @@ const Shop = () => {
                                     </div>
                                 </div>
                             ) : currentItems.length > 0 ? (
-                                <div className={`grid gap-5 lg:gap-8 ${viewMode === 'grid' ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
+                                {/* Grid container updated here: grid-cols-2 for mobile/small screens by default */}
+                                <div className={`grid gap-5 lg:gap-8 ${viewMode === 'grid' ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-3' : 'grid-cols-1'}`}>
                                     {currentItems.map((item) => {
                                         const itemSlug = item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
                                         return (
@@ -198,8 +199,8 @@ const Shop = () => {
                                                         badgeText={item.stock > 0 ? "In Stock" : "Out of Stock"}
                                                         productTitle={item.title}
                                                         productPrice={item.price}
-                                                        layout={viewMode} // <-- View mode পাঠানো হলো
-                                                        description={item.description} // List view এর জন্য ডেসক্রিপশন পাঠানো হলো
+                                                        layout={viewMode}
+                                                        description={item.description}
                                                     />
                                                 </Link>
                                             </div>
