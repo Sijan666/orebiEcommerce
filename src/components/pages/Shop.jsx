@@ -9,29 +9,23 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 const Shop = () => {
-    // States
     const [allData, setAllData] = useState([]);
     const [categories, setCategories] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    // Filter & Sort States
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [sortOption, setSortOption] = useState('default');
-    const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'list'
+    const [viewMode, setViewMode] = useState('grid'); 
 
-    // Pagination States
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage, setItemsPerPage] = useState(12);
 
-    // Fetch Data
     useEffect(() => {
         async function fetchData() {
             try {
                 setIsLoading(true);
                 const response = await axios.get("https://dummyjson.com/products?limit=200");
                 setAllData(response.data.products);
-                
-                // Extract unique categories from data
                 const uniqueCategories = [...new Set(response.data.products.map(item => item.category))];
                 setCategories(uniqueCategories);
             } catch (error) {
@@ -43,13 +37,11 @@ const Shop = () => {
         fetchData();
     }, []);
 
-    // 1. Filtering Logic
     let processedData = [...allData];
     if (selectedCategory !== 'all') {
         processedData = processedData.filter(item => item.category === selectedCategory);
     }
 
-    // 2. Sorting Logic
     if (sortOption === 'priceLowToHigh') {
         processedData.sort((a, b) => a.price - b.price);
     } else if (sortOption === 'priceHighToLow') {
@@ -58,21 +50,19 @@ const Shop = () => {
         processedData.sort((a, b) => a.title.localeCompare(b.title));
     }
 
-    // 3. Pagination Logic
     const totalPages = Math.ceil(processedData.length / itemsPerPage);
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = processedData.slice(indexOfFirstItem, indexOfLastItem);
 
-    // Handlers
     const handleCategoryChange = (category) => {
         setSelectedCategory(category);
-        setCurrentPage(1); // Reset to page 1 when category changes
+        setCurrentPage(1); 
     };
 
     const handleSortChange = (e) => {
         setSortOption(e.target.value);
-        setCurrentPage(1); // Reset to page 1 when sort changes
+        setCurrentPage(1); 
     };
 
     const handlePageChange = (pageNumber) => {
@@ -80,7 +70,6 @@ const Shop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-    // Generate Pagination Numbers
     const getPaginationNumbers = () => {
         const pages = [];
         if (totalPages <= 6) {
@@ -101,13 +90,12 @@ const Shop = () => {
 
     return (
         <>
-            {/* Breadcrumb Part */}
             <Container className={'py-10 md:py-16 lg:py-[125px] px-4 lg:px-0'}>
                 <h3 className="text-[28px] md:text-[34px] lg:text-[39px] text-[#262626] font-bold block pb-3 md:pb-5">Shop</h3>
-                <Flex className={'text-[12px] text-[#767676] gap-x-2 items-center'}>
-                    <p>Home</p>
+                <Flex className={'text-[12px] text-[#767676] gap-x-2 items-center cursor-pointer'}>
+                    <Link to="/" className="hover:text-black">Home</Link>
                     <FaArrowRight />
-                    <p>Shop</p>
+                    <p className="text-black font-semibold">Shop</p>
                 </Flex>
             </Container>
 
@@ -118,7 +106,7 @@ const Shop = () => {
                     <div className="sideBar w-full lg:w-[25%] pb-5 lg:pb-[30px]">
                         <div className="category">
                             <h4 className='text-[#262626] font-bold text-[18px] md:text-[20px] pb-4 md:pb-[30px]'>Shop By Category</h4>
-                            <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-col lg:flex-nowrap gap-x-4 max-h-[400px] overflow-y-auto pr-2">
+                            <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-col lg:flex-nowrap gap-x-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
                                 <p 
                                     onClick={() => handleCategoryChange('all')}
                                     className={`w-full sm:w-[48%] lg:w-full text-sm md:text-base border-b border-[#F0F0F0] pb-2.5 md:pb-[22px] my-2 md:my-[15px] lg:my-[25px] cursor-pointer hover:font-bold hover:text-black duration-300 capitalize ${selectedCategory === 'all' ? 'font-bold text-black' : 'text-[#767676]'}`}
@@ -140,11 +128,8 @@ const Shop = () => {
 
                     {/* Main Content */}
                     <div className="w-full lg:w-[75%]">
-                        
-                        {/* Top Filtering Bar */}
                         <div className="firstLine flex flex-col md:flex-row justify-between items-start md:items-center pb-6 md:pb-10 lg:pb-[50px] gap-y-4 md:gap-y-0">
                             
-                            {/* Grid/List View Toggle */}
                             <div className='flex gap-x-3'>
                                 <div 
                                     onClick={() => setViewMode('grid')}
@@ -160,7 +145,6 @@ const Shop = () => {
                                 </div>
                             </div>
 
-                            {/* Dropdowns */}
                             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-y-3 sm:gap-x-5 w-full md:w-auto">
                                 <div className="flex justify-between sm:justify-start gap-x-2 items-center w-full sm:w-auto">
                                     <p className='text-[#767676] text-sm md:text-base whitespace-nowrap'>Sort by:</p>
@@ -194,7 +178,6 @@ const Shop = () => {
                             </div>
                         </div>
 
-                        {/* Product Grid / List */}
                         <div className="pt-2 w-full">
                             {isLoading ? (
                                 <div className="flex justify-center items-center py-20 w-full">
@@ -215,8 +198,8 @@ const Shop = () => {
                                                         badgeText={item.stock > 0 ? "In Stock" : "Out of Stock"}
                                                         productTitle={item.title}
                                                         productPrice={item.price}
-                                                        // List ভিউ এর জন্য প্রোডাক্ট কম্পোনেন্ট অনুযায়ী CSS Adjust করতে পারেন 
-                                                        className={viewMode === 'list' ? 'flex items-center gap-5' : ''}
+                                                        layout={viewMode} // <-- View mode পাঠানো হলো
+                                                        description={item.description} // List view এর জন্য ডেসক্রিপশন পাঠানো হলো
                                                     />
                                                 </Link>
                                             </div>
@@ -237,9 +220,9 @@ const Shop = () => {
                                     <button
                                         onClick={() => currentPage > 1 && handlePageChange(currentPage - 1)}
                                         disabled={currentPage === 1}
-                                        className={`group flex items-center gap-x-1 sm:gap-x-2 px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded text-[10px] sm:text-xs md:text-sm font-medium tracking-wide transition-all duration-300 ${
+                                        className={`cursor-pointer disabled:cursor-not-allowed group flex items-center gap-x-1 sm:gap-x-2 px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded text-[10px] sm:text-xs md:text-sm font-medium tracking-wide transition-all duration-300 ${
                                             currentPage === 1 
-                                                ? 'text-gray-400 cursor-not-allowed border border-transparent' 
+                                                ? 'text-gray-400 border border-transparent' 
                                                 : 'text-black border border-[#F0F0F0] hover:bg-black hover:text-white'
                                         }`}
                                     >
@@ -257,7 +240,7 @@ const Shop = () => {
                                                 <button
                                                     key={page}
                                                     onClick={() => handlePageChange(page)}
-                                                    className={`flex h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 items-center justify-center rounded text-[10px] sm:text-xs md:text-sm transition-all duration-300 ${
+                                                    className={`cursor-pointer flex h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 items-center justify-center rounded text-[10px] sm:text-xs md:text-sm transition-all duration-300 ${
                                                         currentPage === page 
                                                             ? 'bg-black text-white font-bold' 
                                                             : 'text-[#767676] border border-[#F0F0F0] hover:bg-black hover:text-white'
@@ -272,9 +255,9 @@ const Shop = () => {
                                     <button
                                         onClick={() => currentPage < totalPages && handlePageChange(currentPage + 1)}
                                         disabled={currentPage === totalPages}
-                                        className={`group flex items-center gap-x-1 sm:gap-x-2 px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded text-[10px] sm:text-xs md:text-sm font-medium tracking-wide transition-all duration-300 ${
+                                        className={`cursor-pointer disabled:cursor-not-allowed group flex items-center gap-x-1 sm:gap-x-2 px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded text-[10px] sm:text-xs md:text-sm font-medium tracking-wide transition-all duration-300 ${
                                             currentPage === totalPages 
-                                                ? 'text-gray-400 cursor-not-allowed border border-transparent' 
+                                                ? 'text-gray-400 border border-transparent' 
                                                 : 'text-black border border-[#F0F0F0] hover:bg-black hover:text-white'
                                         }`}
                                     >
