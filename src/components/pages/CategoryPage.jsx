@@ -7,10 +7,8 @@ import Container from "../Container";
 
 const CategoryPage = () => {
     const { categoryName } = useParams(); 
-    
     const [products, setProducts] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-
     const displayCategoryName = categoryName ? categoryName.replace(/-/g, ' ') : '';
 
     useEffect(() => {
