@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 const About = () => {
   return (
     <section className="font-sans pb-10" id="about">
-      {/* 1. Sleek Breadcrumb Banner */}
+      {/* Breadcrumb */}
       <div className="bg-[#F5F5F3] py-10 md:py-16">
         <Container className="px-4 lg:px-0">
           <h1 className="text-3xl md:text-5xl text-[#262626] font-bold mb-4">About Orebi</h1>
@@ -22,7 +22,7 @@ const About = () => {
           </Flex>
         </Container>
       </div>
-      {/* 2. Modern Hero Intro */}
+      {/* Hero */}
       <Container className="py-16 md:py-24 px-4 lg:px-0 text-center max-w-4xl mx-auto">
         <h2 className="text-2xl md:text-4xl lg:text-[42px] leading-snug text-[#262626] font-bold mb-6">
           Redefining the <span className="text-transparent bg-clip-text bg-linear-to-r from-gray-500 to-black">e-commerce experience</span> for the modern world.
@@ -31,7 +31,7 @@ const About = () => {
           Orebi is one of the world’s leading ecommerce brands, internationally recognized for celebrating the essence of classic worldwide style. We bring you top-tier products with an uncompromising commitment to quality.
         </p>
       </Container>
-      {/* 3. Asymmetric Image Grid */}
+      {/* Image */}
       <Container className="pb-20 md:pb-32 px-4 lg:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
           <div className="relative group overflow-hidden rounded-2xl shadow-xl">
@@ -46,7 +46,7 @@ const About = () => {
           </div>
         </div>
       </Container>
-      {/* 4. Brand Stats Section */}
+      {/* Brand Stats */}
       <div className="bg-black text-white py-16 mb-20 md:mb-32">
         <Container className="px-4 lg:px-0">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-y border-gray-800 py-10">
@@ -69,7 +69,7 @@ const About = () => {
           </div>
         </Container>
       </div>
-      {/* 5. Core Values Feature Cards */}
+      {/* Values */}
       <Container className="pb-10 px-4 lg:px-0">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#262626]">Who We Are</h2>
