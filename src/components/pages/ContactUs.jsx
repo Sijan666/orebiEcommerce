@@ -26,7 +26,7 @@ const ContactUs = () => {
 
   return (
     <>
-      {/* breadcrumb section */}
+      {/* breadcrumb */}
       <Container className={'py-10 md:py-16 lg:py-[125px] px-4 lg:px-0'}>
         <h3 className="text-[28px] md:text-[34px] lg:text-[39px] text-[#262626] font-bold block pb-3 md:pb-5">
           Contacts
@@ -37,7 +37,7 @@ const ContactUs = () => {
           <p>Contacts</p>
         </Flex>
       </Container>
-      {/* contact form section */}
+      {/* contact form */}
       <Container className={'pb-16 md:pb-[100px] lg:pb-[140px] px-4 lg:px-0'}>
         <h4 className="text-[28px] md:text-[34px] lg:text-[39px] text-[#262626] font-bold block pb-6 md:pb-10">
           Fill up a Form
@@ -99,7 +99,7 @@ const ContactUs = () => {
             Post
           </button>
         </form>
-        {/* map section */}
+        {/* map */}
         <div className="mt-16 md:mt-24">
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116833.9730352447!2d90.33728817435122!3d23.78084055948969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sus!4v1714413123456!5m2!1sen!2sus" 
