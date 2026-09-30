@@ -37,7 +37,7 @@ const CartPage = () => {
                     Shopping Cart
                 </h1>
                 <div className="lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16">
-                    {/* left column: cart items list */}
+                    {/* left column */}
                     <section aria-labelledby="cart-heading" className="lg:col-span-7 xl:col-span-8">
                         <h2 id="cart-heading" className="sr-only">Items in your shopping cart</h2>
                         <ul role="list" className="divide-y divide-gray-200 border-t border-b border-gray-200">
@@ -82,7 +82,7 @@ const CartPage = () => {
                             ))}
                         </ul>
                     </section>
-                    {/* right column: order summary */}
+                    {/* right column */}
                     <section aria-labelledby="summary-heading" className="mt-16 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 xl:col-span-4 lg:mt-0 lg:p-8 lg:sticky lg:top-8 border border-gray-100">
                         <h2 id="summary-heading" className="text-lg font-medium text-gray-900 mb-6">
                             Order Summary
@@ -120,7 +120,6 @@ const CartPage = () => {
                             </p>
                         </div>
                     </section>
-                    
                 </div>
             </div>
         </div>
