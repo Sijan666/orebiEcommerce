@@ -15,15 +15,12 @@ const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [showCategory, setShowCategory] = useState(false);
     const [showUserMenu, setShowUserMenu] = useState(false);
-    
     // Live Search States
     const [searchQuery, setSearchQuery] = useState("");
     const [debouncedSearch, setDebouncedSearch] = useState("");
     const [allProducts, setAllProducts] = useState([]);
     const [showSearchDropdown, setShowSearchDropdown] = useState(false);
-
     const isSearching = searchQuery.trim() !== "" && searchQuery !== debouncedSearch;
-    
     const searchResults = debouncedSearch.trim() !== "" 
         ? allProducts.filter((product) => 
             product.title.toLowerCase().includes(debouncedSearch.toLowerCase())
@@ -32,18 +29,14 @@ const Header = () => {
 
     const location = useLocation();
     const navigate = useNavigate();
-    
     const categoryRef = useRef();
     const userRef = useRef();
     const searchRef = useRef(); 
     const mobileSearchRef = useRef();
-    
     // redux
     const cartItems = useSelector((state) => state.cart.cartItems);
     const totalCartQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
-
     const lenis = useLenis();
-
     // fetch data for search
     useEffect(() => {
         const fetchProducts = async () => {
