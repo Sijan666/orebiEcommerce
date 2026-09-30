@@ -8,7 +8,7 @@ const Login = () => {
     return (
         <>
         <section id="login">
-            {/* breadcrumb part */}
+            {/* breadcrumb */}
             <Container className={'py-10 md:py-16 lg:py-[100px] px-4 lg:px-0'}>
                 <h3 className="text-[28px] md:text-[34px] lg:text-[39px] text-[#262626] font-bold block pb-3 md:pb-5">Login</h3>
                 <Flex className={'text-[12px] text-[#767676] gap-x-2 items-center'}>
