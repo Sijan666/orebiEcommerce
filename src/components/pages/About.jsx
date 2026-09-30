@@ -22,17 +22,15 @@ const About = () => {
           </Flex>
         </Container>
       </div>
-
       {/* 2. Modern Hero Intro */}
       <Container className="py-16 md:py-24 px-4 lg:px-0 text-center max-w-4xl mx-auto">
         <h2 className="text-2xl md:text-4xl lg:text-[42px] leading-snug text-[#262626] font-bold mb-6">
-          Redefining the <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-black">e-commerce experience</span> for the modern world.
+          Redefining the <span className="text-transparent bg-clip-text bg-linear-to-r from-gray-500 to-black">e-commerce experience</span> for the modern world.
         </h2>
         <p className="text-base md:text-lg text-[#767676] leading-relaxed">
           Orebi is one of the world’s leading ecommerce brands, internationally recognized for celebrating the essence of classic worldwide style. We bring you top-tier products with an uncompromising commitment to quality.
         </p>
       </Container>
-
       {/* 3. Asymmetric Image Grid */}
       <Container className="pb-20 md:pb-32 px-4 lg:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
@@ -48,7 +46,6 @@ const About = () => {
           </div>
         </div>
       </Container>
-
       {/* 4. Brand Stats Section */}
       <div className="bg-black text-white py-16 mb-20 md:mb-32">
         <Container className="px-4 lg:px-0">
@@ -72,14 +69,12 @@ const About = () => {
           </div>
         </Container>
       </div>
-
       {/* 5. Core Values Feature Cards */}
       <Container className="pb-10 px-4 lg:px-0">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#262626]">Who We Are</h2>
           <p className="text-[#767676] mt-4 max-w-2xl mx-auto text-base">Discover the principles that drive us to deliver the best shopping experience every single day.</p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Vision */}
           <div className="bg-white p-8 lg:p-10 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:-translate-y-2 transition-transform duration-300 border border-gray-100 group">
@@ -91,7 +86,6 @@ const About = () => {
               To become the world's most customer-centric platform, where people can discover premium products with unparalleled ease and confidence.
             </p>
           </div>
-
           {/* Story */}
           <div className="bg-white p-8 lg:p-10 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:-translate-y-2 transition-transform duration-300 border border-gray-100 group">
             <div className="w-14 h-14 bg-gray-50 rounded-full flex items-center justify-center mb-6 text-2xl text-black group-hover:bg-black group-hover:text-white transition-colors duration-300">
@@ -102,7 +96,6 @@ const About = () => {
               Started as a vision for better retail, Orebi has grown into a global marketplace. Our journey is fueled by passion, innovation, and an unwavering commitment to our users.
             </p>
           </div>
-
           {/* Quality */}
           <div className="bg-white p-8 lg:p-10 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:-translate-y-2 transition-transform duration-300 border border-gray-100 group">
             <div className="w-14 h-14 bg-gray-50 rounded-full flex items-center justify-center mb-6 text-2xl text-black group-hover:bg-black group-hover:text-white transition-colors duration-300">
