@@ -1,63 +1,122 @@
-import Container from "../Container"
-import Flex from "../Flex"
-import { FaArrowRight } from "react-icons/fa";
+import React from "react";
+import Container from "../Container";
+import Flex from "../Flex";
+import { FaArrowRight, FaBullseye, FaHistory, FaAward } from "react-icons/fa";
 import Images from "../Images";
-import about1 from '../../assets/about1.png'
-import about2 from '../../assets/about2.png'
+import about1 from '../../assets/about1.png';
+import about2 from '../../assets/about2.png';
 import Button from "../Button";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <>
-    <section className="py-2" id="about">
-      {/* breadcrumb Part */}
-      <Container className={'py-10 md:py-20 lg:py-[125px] px-4 lg:px-0'}>
-          <h3 className="text-[28px] md:text-[34px] lg:text-[39px] text-[#262626] font-bold block pb-3 md:pb-5">About</h3>
-          <Flex className={'text-[12px] text-[#767676] gap-x-2 items-center'}>
-              <p>Home</p>
-              <FaArrowRight />
-              <p>About</p>
+    <section className="font-sans pb-10" id="about">
+      {/* 1. Sleek Breadcrumb Banner */}
+      <div className="bg-[#F5F5F3] py-10 md:py-16">
+        <Container className="px-4 lg:px-0">
+          <h1 className="text-3xl md:text-5xl text-[#262626] font-bold mb-4">About Orebi</h1>
+          <Flex className="text-sm text-[#767676] gap-x-3 items-center font-medium">
+            <Link to="/" className="hover:text-[#262626] transition-colors">Home</Link>
+            <FaArrowRight className="text-xs" />
+            <span className="text-[#262626]">About Us</span>
           </Flex>
+        </Container>
+      </div>
+
+      {/* 2. Modern Hero Intro */}
+      <Container className="py-16 md:py-24 px-4 lg:px-0 text-center max-w-4xl mx-auto">
+        <h2 className="text-2xl md:text-4xl lg:text-[42px] leading-snug text-[#262626] font-bold mb-6">
+          Redefining the <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-black">e-commerce experience</span> for the modern world.
+        </h2>
+        <p className="text-base md:text-lg text-[#767676] leading-relaxed">
+          Orebi is one of the world’s leading ecommerce brands, internationally recognized for celebrating the essence of classic worldwide style. We bring you top-tier products with an uncompromising commitment to quality.
+        </p>
       </Container>
-      {/* images */}
-      <Container className={'pb-[50px] md:pb-20 lg:pb-[100px] px-4 lg:px-0'}>
-        <Flex className={'flex-col md:flex-row justify-between gap-y-8 md:gap-y-0 md:gap-x-6 lg:gap-x-10'}>
-          <div className="leftSide relative w-full md:w-1/2">
-            <Images imgSrc={about1} className="w-full object-cover"/>
-            <Button btnText={'Our Brands'} className={'py-3 px-8 md:py-4 md:px-14 absolute bottom-5 md:bottom-[30px] lg:bottom-[50px] left-[50%] -translate-x-[50%] text-sm md:text-base whitespace-nowrap'}/>
+
+      {/* 3. Asymmetric Image Grid */}
+      <Container className="pb-20 md:pb-32 px-4 lg:px-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
+          <div className="relative group overflow-hidden rounded-2xl shadow-xl">
+            <Images imgSrc={about1} className="w-full h-full md:max-h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"/>
+            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-500"></div>
+            <Button btnText="Our Brands" className="absolute bottom-8 left-8 py-3 px-8 text-sm font-semibold rounded-full shadow-lg"/>
           </div>
-          <div className="rightSide relative w-full md:w-1/2">
-            <Images imgSrc={about2} className="w-full object-cover"/>
-            <Button btnText={'Our Stores'} className={'py-3 px-8 md:py-4 md:px-14 absolute bottom-5 md:bottom-[30px] lg:bottom-[50px] left-[50%] -translate-x-[50%] text-sm md:text-base whitespace-nowrap'}/>
+          <div className="relative group overflow-hidden rounded-2xl shadow-xl lg:mt-16">
+            <Images imgSrc={about2} className="w-full h-full md:max-h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"/>
+            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-500"></div>
+            <Button btnText="Our Stores" className="absolute bottom-8 left-8 py-3 px-8 text-sm font-semibold rounded-full shadow-lg"/>
           </div>
-        </Flex>
+        </div>
       </Container>
-      {/* text */}
-      <Container className={'px-4 lg:px-0'}>
-        <h4 className="text-[20px] md:text-[28px] lg:text-[39px] leading-[30px] md:leading-[42px] lg:leading-[52px]">
-          Orebi is one of the world’s leading ecommerce brands and is internationally recognized for celebrating the essence of classic Worldwide cool looking style.
-        </h4>
-      </Container>
-      {/* three columns */}
-      <Container className={'py-[50px] md:py-20 lg:py-[120px] px-4 lg:px-0'}>
-        <Flex className={'flex-col md:flex-row md:flex-wrap lg:flex-nowrap justify-between gap-y-10 md:gap-y-12 lg:gap-y-0 lg:gap-x-5'}>
-          <div className="w-full md:w-[48%] lg:w-1/3">
-            <h4 className="pb-[15px] md:pb-[25px] text-[20px] md:text-[25px] text-[#262626] font-bold">Our Vision</h4>
-            <p className="text-[#767676] leading-[26px] md:leading-[30px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolor hic architecto dolorem blanditiis, voluptates quibusdam porro ut. Earum, nam.</p>
+
+      {/* 4. Brand Stats Section */}
+      <div className="bg-black text-white py-16 mb-20 md:mb-32">
+        <Container className="px-4 lg:px-0">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-y border-gray-800 py-10">
+            <div>
+              <h3 className="text-4xl md:text-5xl font-bold mb-2">50+</h3>
+              <p className="text-gray-400 text-xs md:text-sm uppercase tracking-widest mt-3">Global Brands</p>
+            </div>
+            <div>
+              <h3 className="text-4xl md:text-5xl font-bold mb-2">10k</h3>
+              <p className="text-gray-400 text-xs md:text-sm uppercase tracking-widest mt-3">Happy Customers</p>
+            </div>
+            <div>
+              <h3 className="text-4xl md:text-5xl font-bold mb-2">99%</h3>
+              <p className="text-gray-400 text-xs md:text-sm uppercase tracking-widest mt-3">Positive Feedback</p>
+            </div>
+            <div>
+              <h3 className="text-4xl md:text-5xl font-bold mb-2">24/7</h3>
+              <p className="text-gray-400 text-xs md:text-sm uppercase tracking-widest mt-3">Customer Support</p>
+            </div>
           </div>
-          <div className="w-full md:w-[48%] lg:w-1/3">
-            <h4 className="pb-[15px] md:pb-[25px] text-[20px] md:text-[25px] text-[#262626] font-bold">Our Story</h4>
-            <p className="text-[#767676] leading-[26px] md:leading-[30px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolor hic architecto dolorem blanditiis, voluptates quibusdam porro ut. Earum, nam.</p>
+        </Container>
+      </div>
+
+      {/* 5. Core Values Feature Cards */}
+      <Container className="pb-10 px-4 lg:px-0">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#262626]">Who We Are</h2>
+          <p className="text-[#767676] mt-4 max-w-2xl mx-auto text-base">Discover the principles that drive us to deliver the best shopping experience every single day.</p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Vision */}
+          <div className="bg-white p-8 lg:p-10 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:-translate-y-2 transition-transform duration-300 border border-gray-100 group">
+            <div className="w-14 h-14 bg-gray-50 rounded-full flex items-center justify-center mb-6 text-2xl text-black group-hover:bg-black group-hover:text-white transition-colors duration-300">
+              <FaBullseye />
+            </div>
+            <h4 className="text-2xl font-bold text-[#262626] mb-4">Our Vision</h4>
+            <p className="text-[#767676] leading-relaxed text-[15px]">
+              To become the world's most customer-centric platform, where people can discover premium products with unparalleled ease and confidence.
+            </p>
           </div>
-          <div className="w-full lg:w-1/3">
-            <h4 className="pb-[15px] md:pb-[25px] text-[20px] md:text-[25px] text-[#262626] font-bold">Our Brands</h4>
-            <p className="text-[#767676] leading-[26px] md:leading-[30px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolor hic architecto dolorem blanditiis, voluptates quibusdam porro ut. Earum, nam.</p>
+
+          {/* Story */}
+          <div className="bg-white p-8 lg:p-10 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:-translate-y-2 transition-transform duration-300 border border-gray-100 group">
+            <div className="w-14 h-14 bg-gray-50 rounded-full flex items-center justify-center mb-6 text-2xl text-black group-hover:bg-black group-hover:text-white transition-colors duration-300">
+              <FaHistory />
+            </div>
+            <h4 className="text-2xl font-bold text-[#262626] mb-4">Our Story</h4>
+            <p className="text-[#767676] leading-relaxed text-[15px]">
+              Started as a vision for better retail, Orebi has grown into a global marketplace. Our journey is fueled by passion, innovation, and an unwavering commitment to our users.
+            </p>
           </div>
-        </Flex>
+
+          {/* Quality */}
+          <div className="bg-white p-8 lg:p-10 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:-translate-y-2 transition-transform duration-300 border border-gray-100 group">
+            <div className="w-14 h-14 bg-gray-50 rounded-full flex items-center justify-center mb-6 text-2xl text-black group-hover:bg-black group-hover:text-white transition-colors duration-300">
+              <FaAward />
+            </div>
+            <h4 className="text-2xl font-bold text-[#262626] mb-4">Top Quality</h4>
+            <p className="text-[#767676] leading-relaxed text-[15px]">
+              We partner exclusively with premium brands that meet our rigorous standards for quality, sustainability, and ethical manufacturing processes.
+            </p>
+          </div>
+        </div>
       </Container>
     </section>
-    </>
-  )
+  );
 }
 
-export default About
+export default About;
