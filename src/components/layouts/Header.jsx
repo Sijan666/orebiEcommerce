@@ -246,7 +246,7 @@ const Header = () => {
                                     <Link to={'/login'} onClick={() => setShowUserMenu(false)}>
                                         <Button 
                                             btnText="Log In" 
-                                            className="w-full py-2 text-sm !bg-white !text-black border border-gray-200 hover:!bg-gray-50 transition-colors rounded-lg" 
+                                            className="w-full py-2 text-sm !bg-white text-black! border border-gray-200 hover:!bg-gray-50 transition-colors rounded-lg" 
                                         />
                                     </Link>
                                     <Link to={'/signup'} onClick={() => setShowUserMenu(false)}>
